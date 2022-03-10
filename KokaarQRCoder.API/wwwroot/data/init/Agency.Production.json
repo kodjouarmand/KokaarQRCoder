@@ -1,0 +1,14 @@
+[
+  {
+	"Id": "eca35462-6389-4e20-bfb6-d471d6081d32",
+    "Name": "Douala",
+    "LocationUrl": "https://goo.gl/maps/Fm8ryL34v7gcHHK26",
+	"CompanyId": "b61fafc1-c972-48ad-872a-62639cf70d45"
+  },
+  {
+	"Id": "3273a238-29c1-4e4d-966e-93623adc741e",
+    "Name": "Yaoundé",
+    "LocationUrl": "https://goo.gl/maps/NERkGgGKGRPYyRpy5",
+	"CompanyId": "b61fafc1-c972-48ad-872a-62639cf70d45"
+  }
+]

@@ -1,0 +1,68 @@
+﻿@model AgencyViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var title = "Add Agency";
+}
+
+
+<form method="post">
+    <div class="row p-3 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (Model.Agency.Id != Guid.Empty)
+        {
+            //edit
+            title = "Edit Agency";
+            <input type="hidden" asp-for="Agency.Id" />
+        }
+        <div class="col-12 border-bottom">
+            <h2 class="text-primary">@title</h2>
+        </div>
+        <div class="col-8 pt-4">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Agency.Name"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agency.Name" class="form-control" />
+                    <span asp-validation-for="Agency.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Agency.LocationUrl"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agency.LocationUrl" class="form-control" />
+                    <span asp-validation-for="Agency.LocationUrl" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    Company
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(m => m.Agency.CompanyId, Model.CompanyList, "-Select a company",
+                   new { @class = "form-control" })
+                    <span asp-validation-for="Agency.CompanyId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    @if (Model.Agency.Id != Guid.Empty)
+                    {
+                        <partial name="_EditAndBackToListButton" model="Model.Agency.Id" />
+                    }
+                    else
+                    {
+                        <partial name="_CreateAndBackToListButton" />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />    
+}

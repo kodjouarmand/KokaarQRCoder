@@ -1,0 +1,37 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">Error</h1>
+<br />
+<h2 class="text-danger">An error occurred while processing your request</h2>
+<br />
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+@if (!string.IsNullOrWhiteSpace(Model.Message))
+{
+    <p>
+        <strong>Error Message:</strong> <code>@Model.Message</code>
+    </p>
+
+}
+<br />
+@if (User.IsInRole(StaticHelper.ROLE_NAME_SUPER_ADMIN))
+{
+    <p>
+        <i>For more details checks the logs files <strong>@LoggingOptions.DefaultLogFileName</strong> at<strong> wwwroot\logs </strong> folder.</i>
+    </p>
+}
+else
+{
+    <p>
+        Please contact the system administrator for more details.
+    </p>
+}
+<br />
+<a href='javascript:history.go(-1)'>Return to previous page</a>

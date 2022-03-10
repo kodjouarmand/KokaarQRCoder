@@ -1,0 +1,24 @@
+[
+  {
+	"Id": "7c9e6679-7425-40de-944b-e07fc1f90ae7",
+	"UserName": "admin.camfood",
+	"NormalizedUserName": "admin.camfood",
+	"Name": "Camfood Administrator",
+	"Email": "admin.camfood@gmail.com",
+	"NormalizedEmail": "admin.camfood@gmail.com",
+	"EmailConfirmed": true,
+	"PhoneNumberConfirmed": true,
+	"CompanyId": "b61fafc1-c972-48ad-872a-62639cf70d45"
+  },
+  {
+	"Id": "936DA01F-9ABD-4d9d-80C7-02AF85C822A8",
+	"UserName": "user.camfood",
+	"NormalizedUserName": "user.camfood",
+	"Name": "Camfood User",
+	"Email": "user.camfood@gmail.com",
+	"NormalizedEmail": "user.camfood@gmail.com",
+	"EmailConfirmed": true,
+	"PhoneNumberConfirmed": true,
+	"CompanyId": "b61fafc1-c972-48ad-872a-62639cf70d45"
+  }
+]

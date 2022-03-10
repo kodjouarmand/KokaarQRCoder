@@ -1,0 +1,18 @@
+[
+		{
+		"Id" : "b61fafc1-c972-48ad-872a-62639cf70d45",
+		"Name" : "Carmand",
+		"Address" : "Bonamoussadi, Douala - Cameroun",
+		"PhoneNumber" : "655458007",
+		"Email" : "info@camand.com",	
+		"WebSite": "https://carmand.com/"
+	},
+	{
+		"Id" : "d9d91f02-cf99-406e-8ce8-6858756aa88d",
+		"Name" : "K and C Conseils Inc",
+		"Address" : "1650, Av Banville, Québec, QC, G1K1R9",
+		"Email" : "info@kc.com",
+		"PhoneNumber" : "5816698785",
+		"WebSite": "www.kc.com"
+	}
+]

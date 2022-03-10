@@ -1,0 +1,11 @@
+﻿@model Guid
+    <br />
+    <div class="row">
+        <div class="col">
+            <button type="submit" class="btn btn-primary form-control" asp-route-id="@Model"><i class="fas fa-save"></i> &nbsp; Save</button>
+        </div>
+
+        <div class="col">
+            <a asp-action="Index" class="btn btn-success form-control"><i class="fas fa-list"></i> &nbsp; Back to List</a>
+        </div>
+    </div>

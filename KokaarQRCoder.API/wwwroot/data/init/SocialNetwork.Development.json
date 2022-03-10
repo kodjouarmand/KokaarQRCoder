@@ -1,0 +1,18 @@
+[
+  {
+	"Id": "09904f1f-653d-4748-b512-a960cd2421b6",
+    "Name": "Instagram"
+  },
+  {
+	"Id": "22dab9a5-8d38-491c-b133-c20d77dbbcce",
+    "Name": "Facebook"
+  },
+  {
+	"Id": "1d8c0f9a-1276-4fa4-aa88-d9a5a2601994",
+    "Name": "LinkedIn"
+  },
+  {
+	"Id": "8808ccb0-12ce-4297-800b-68fa77969681",
+    "Name": "Twitter"
+  }
+]

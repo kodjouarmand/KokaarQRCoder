@@ -1,0 +1,20 @@
+[
+  {
+	"Id": "eca35462-6389-4e20-bfb6-d471d6081d32",
+    "Name": "Bonamoussadi",
+    "LocationUrl": "https://goo.gl/maps/Fm8ryL34v7gcHHK26",
+	"CompanyId": "b61fafc1-c972-48ad-872a-62639cf70d45"
+  },
+  {
+	"Id": "3273a238-29c1-4e4d-966e-93623adc741e",
+    "Name": "Akwa",
+    "LocationUrl": "https://goo.gl/maps/NERkGgGKGRPYyRpy5",
+	"CompanyId": "b61fafc1-c972-48ad-872a-62639cf70d45"
+  },
+  {
+	"Id": "fd12129f-6365-422f-baaf-6d44bb34857a",
+    "Name": "Québec",
+    "LocationUrl": "https://goo.gl/maps/Fm8ryL34v7gcHHK27",
+	"CompanyId": "d9d91f02-cf99-406e-8ce8-6858756aa88d"
+  }
+]

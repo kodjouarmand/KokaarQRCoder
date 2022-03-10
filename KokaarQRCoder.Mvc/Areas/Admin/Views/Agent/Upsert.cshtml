@@ -1,0 +1,93 @@
+﻿@model AgentViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var title = "Add Agent";
+}
+
+
+<form method="post" enctype="multipart/form-data">
+    <div class="row p-3 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (Model.Agent.Id != Guid.Empty)
+        {
+            //edit
+            title = "Edit Agent";
+            <input type="hidden" asp-for="Agent.Id" />
+        }
+        <div class="col-12 border-bottom">
+            <h2 class="text-primary">@title</h2>
+        </div>
+        <div class="col-8 pt-4">
+            @if (Model.Agent.Id == Guid.Empty)
+            {
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Agent.Number"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Agent.Number" class="form-control" />
+                        <span asp-validation-for="Agent.Number" class="text-danger"></span>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <input type="hidden" asp-for="Agent.Number" />
+            }
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Agent.Name"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.Name" class="form-control" />
+                    <span asp-validation-for="Agent.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Agent.PhoneNumber"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.PhoneNumber" class="form-control" />
+                    <span asp-validation-for="Agent.PhoneNumber" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Agent.Email"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.Email" class="form-control" />
+                    <span asp-validation-for="Agent.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    Company
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(m => m.Agent.CompanyId, Model.CompanyList, "-Select a company",
+                   new { @class = "form-control" })
+                    <span asp-validation-for="Agent.CompanyId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    @if (Model.Agent.Id != Guid.Empty)
+                    {
+                        <partial name="_EditAndBackToListButton" model="Model.Agent.Id" />
+                    }
+                    else
+                    {
+                        <partial name="_CreateAndBackToListButton" />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

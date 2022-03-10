@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KokaarQrCoder.DataAccess\KokaarQrCoder.DataAccess.csproj" />
+    <ProjectReference Include="..\KokaarQrCoder.Utility\KokaarQrCoder.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,46 @@
+[
+  {
+	"Id": "7c9e6679-7425-40de-944b-e07fc1f90ae7",
+	"UserName": "admin.carmand",
+	"NormalizedUserName": "admin.carmand",
+	"Name": "Carmand Administrator",
+	"Email": "admin.carmand@gmail.com",
+	"NormalizedEmail": "admin.carmand@gmail.com",
+	"EmailConfirmed": true,
+	"PhoneNumberConfirmed": true,
+	"CompanyId": "b61fafc1-c972-48ad-872a-62639cf70d45"
+  },
+  {
+	"Id": "0f8fad5b-d9cb-469f-a165-70867728950e",
+	"UserName": "admin.kc",
+	"NormalizedUserName": "admin.kc",
+	"Name": "KC Administrator",
+	"Email": "admin.kc@gmail.com",
+	"NormalizedEmail": "admin.kc@gmail.com",
+	"EmailConfirmed": true,
+	"PhoneNumberConfirmed": true,
+	"CompanyId": "d9d91f02-cf99-406e-8ce8-6858756aa88d"
+  },
+  {
+	"Id": "936DA01F-9ABD-4d9d-80C7-02AF85C822A8",
+	"UserName": "user.carmand",
+	"NormalizedUserName": "user.carmand",
+	"Name": "Carmand User",
+	"Email": "user.carmand@gmail.com",
+	"NormalizedEmail": "user.carmand@gmail.com",
+	"EmailConfirmed": true,
+	"PhoneNumberConfirmed": true,
+	"CompanyId": "b61fafc1-c972-48ad-872a-62639cf70d45"
+  },
+  {
+	"Id": "F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4",
+	"UserName": "user.kc",
+	"NormalizedUserName": "user.kc",
+	"Name": "KC User",
+	"Email": "user.kc@gmail.com",
+	"NormalizedEmail": "user.kc@gmail.com",
+	"EmailConfirmed": true,
+	"PhoneNumberConfirmed": true,
+	"CompanyId": "d9d91f02-cf99-406e-8ce8-6858756aa88d"
+  }
+]

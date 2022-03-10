@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>698a65bd-b113-4da9-944d-3b106363c2b7</UserSecretsId>
+    <EnvironmentName>Production</EnvironmentName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fm.EntityFrameworkCore.Relational" Version="4.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KokaarQRCoder.Domain\KokaarQrCoder.Domain.csproj" />
+    <ProjectReference Include="..\KokaarQrCoder.Infrastructure\KokaarQrCoder.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\data\seed\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\logs\**" CopyToPublishDirectory="Never" />
+  </ItemGroup>
+</Project>

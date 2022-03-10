@@ -1,0 +1,32 @@
+[
+  {
+	"Id": "36208a40-56cf-4b67-9cb0-b689f56fd358",
+    "Account": "secel@instagram.com",
+	"CompanyId": "b61fafc1-c972-48ad-872a-62639cf70d45",
+    "SocialNetworkId": "09904f1f-653d-4748-b512-a960cd2421b6"
+  },
+  {
+	"Id": "9464ac51-48aa-493b-aefb-16c334811c08",
+    "Account": "secel@facebook.com",
+	"CompanyId": "b61fafc1-c972-48ad-872a-62639cf70d45",
+    "SocialNetworkId": "22dab9a5-8d38-491c-b133-c20d77dbbcce"
+  },
+  {
+	"Id": "a58d95ff-afb2-4f80-8637-ef0eff1702c1",
+    "Account": "kc@facebook.com",
+	"CompanyId": "d9d91f02-cf99-406e-8ce8-6858756aa88d",
+    "SocialNetworkId": "22dab9a5-8d38-491c-b133-c20d77dbbcce"
+  },
+  {
+	"Id": "7ae32a5d-a8e0-4537-b27f-4284a903b660",
+    "Account": "kc@twitter.com",
+	"CompanyId": "d9d91f02-cf99-406e-8ce8-6858756aa88d",
+    "SocialNetworkId": "8808ccb0-12ce-4297-800b-68fa77969681"
+  },
+  {
+	"Id": "5f7fc731-b180-4a0f-8b3b-32a6a0acb1a3",
+    "Account": "kc@linkedin.com",
+	"CompanyId": "d9d91f02-cf99-406e-8ce8-6858756aa88d",
+    "SocialNetworkId": "1d8c0f9a-1276-4fa4-aa88-d9a5a2601994"
+  }
+]

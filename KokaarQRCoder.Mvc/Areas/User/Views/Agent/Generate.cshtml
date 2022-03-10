@@ -1,0 +1,120 @@
+﻿@model AgentViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var title = "Generate QR code for an Agent";
+}
+
+<form method="post">
+    <div class="row p-3 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Agent.Id" />
+        <div class="col-12 border-bottom">
+            <h2 class="text-primary">@title</h2>
+        </div>
+        <div class="col-8 pt-4">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Agent.Name"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.Name" class="form-control" />
+                    <span asp-validation-for="Agent.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Agent.PhoneNumber"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.PhoneNumber" class="form-control"/>
+                    <span asp-validation-for="Agent.PhoneNumber" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Agent.Email"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.Email" class="form-control" />
+                    <span asp-validation-for="Agent.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Company Name</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.Company.Name" class="form-control" disabled="disabled" />
+                    <span asp-validation-for="Agent.Company.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Company Phone Number</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.Company.PhoneNumber" class="form-control" disabled="disabled" />
+                    <span asp-validation-for="Agent.Company.PhoneNumber" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Company Email</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.Company.Email" class="form-control" disabled="disabled" />
+                    <span asp-validation-for="Agent.Company.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Company Web Site</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.Company.WebSite" class="form-control" disabled="disabled" />
+                    <span asp-validation-for="Agent.Company.WebSite" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Company City</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Agent.Company.Address" class="form-control" disabled="disabled" />
+                    <span asp-validation-for="Agent.Company.Address" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="col-3 offset-0 pt-4">
+            <div class="form-group row">
+                <div class="col offset-0">
+                    <div class="row">
+                        <div class="col">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary form-control"><i class="fas fa-qrcode"></i> &nbsp; Generate</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-success form-control"><i class="fas fa-list"></i> &nbsp; Back</a>
+                        </div>
+                    </div>
+                    <br />
+                    @if (Model.HasQRCode)
+                    {
+                        var generatedQRCodeUrl = $"/images/{CommonHelper.RemoveSpecialCharacters(Model.Agent.Name)}.png";
+                        <div class="row">
+                            <div class="col">
+                                <img src="@generatedQRCodeUrl" width="100%" style="border-radius:5px; border:1px solid #bbb9b9" />
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

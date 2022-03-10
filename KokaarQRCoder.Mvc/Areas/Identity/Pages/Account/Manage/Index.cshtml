@@ -1,0 +1,72 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+
+<h4>@ViewData["Title"]</h4>
+<partial name="_StatusMessage" model="Model.StatusMessage" />
+<div class="row">
+    <div class="col-md-6">
+        <form id="profile-form" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="UserName"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="UserName" class="form-control" disabled />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Input.Name"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Input.Name" class="form-control" />
+                    <span asp-validation-for="Input.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Input.PhoneNumber"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Input.PhoneNumber" class="form-control" />
+                    <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                </div>
+            </div>
+            @if (!User.IsInRole(StaticHelper.ROLE_NAME_SUPER_ADMIN))
+            {
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Input.Role"></label>
+                    </div>
+                    <div class="col-8">
+                        @Html.DropDownListFor(m => m.Input.Role, Model.Input.RoleList,
+                        "-Please select a role", new { @class = "form-control" })
+                        <span asp-validation-for="Input.Role" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Input.CompanyId"></label>
+                    </div>
+                    <div class="col-8">
+                        @Html.DropDownListFor(m => m.Input.CompanyId, Model.Input.CompanyList,
+                        "-Please select a company", new { @class = "form-control" })
+                        <span asp-validation-for="Input.CompanyId" class="text-danger"></span>
+                    </div>
+                </div>
+            }
+            <br/>
+            <button id="update-profile-button" type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

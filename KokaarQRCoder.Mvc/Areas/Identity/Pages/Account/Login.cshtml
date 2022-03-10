@@ -1,0 +1,25 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "KokaarQrCoder - Log in";
+}
+<div id="logreg-forms">
+    <h2 class="h3 mb-3 font-weight-normal text-white bg-primary" style="text-align:center;">Sign In</h2>
+    <form id="account" method="post">
+        <input asp-for="Input.UserName" placeholder="Username..." class="mb-1 form-control" />
+        <input asp-for="Input.Password" placeholder="Password..." type="password" class="form-control" />
+        <button type="submit" class="btn btn-success btn-block"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+        <br />
+        <a id="forgot-password" asp-page="./ForgotPassword" class="pb-2 text-info">Forgot your password?</a>
+        <button type="submit" asp-page-handler="SendVerificationEmail" class="btn-link text-info"
+                style="padding:0px;margin:0px;border:0px;background-color:transparent">
+            Resend email confirmation
+        </button>
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
