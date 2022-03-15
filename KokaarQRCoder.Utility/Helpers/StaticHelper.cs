@@ -11,9 +11,6 @@
         public const string ROLE_NAME_ADMIN = "Administrator";
         public const string ROLE_NAME_SUPER_ADMIN = "Super administrator";
 
-        public const string SUPER_ADMIN_USERNAME = "super.admin@kokaar.com";
-        public const string SUPER_ADMIN_PASSWORD = "SuperAdmin123!";
-
         public const string SESSION_KEY_CURRENT_USER = "CurrentUser";
 
         public const string INIT_DATA_PATH = @"data\init";
